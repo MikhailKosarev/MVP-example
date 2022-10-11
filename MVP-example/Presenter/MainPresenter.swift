@@ -7,13 +7,15 @@
 
 import UIKit
 
-/// an input protocol
+// an input protocol
+// MARK: - MainViewProtocol definition
 protocol MainViewProtocol: UIViewController {
     func addUser(_ user: User)
     func deleteUser(withIndex index: Int)
 }
 
-/// an output protocol
+// an output protocol
+// MARK: - MainPresenterProtocol definition
 protocol MainPresenterProtocol: AnyObject {
     init(view: MainViewProtocol)
     
@@ -21,7 +23,8 @@ protocol MainPresenterProtocol: AnyObject {
     func deleteUser(withIndex index: Int)
 }
 
-/// presenter class
+// a presenter class
+// MARK: - MainPresenter class
 class MainPresenter: MainPresenterProtocol {
 
     weak var view: MainViewProtocol?

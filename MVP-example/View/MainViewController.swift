@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     private var usersArray = [User]()
     
     // MARK: - Public properties
-    ///declare presenter with a strong reference
+    //declare presenter with a strong reference
     public var presenter: MainPresenterProtocol?
 
     // MARK: - Life cycle
@@ -75,6 +75,7 @@ class MainViewController: UIViewController {
     }
 }
 
+// MARK: - MainViewProtocol
 extension MainViewController: MainViewProtocol {
     func addUser(_ user: User) {
         usersArray.append(user)
